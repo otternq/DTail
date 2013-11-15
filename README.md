@@ -50,7 +50,7 @@ $dynamodbClient = DynamoDbClient::factory(array(
     )
 );
 
-$dtail = new DTail($dynamodbClient, $config);
+$dtail = new DTail($dynamodbClient);
 
 $iterator = $dtail->get(
     $config['dyn-table'], 

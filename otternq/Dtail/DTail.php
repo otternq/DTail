@@ -5,10 +5,6 @@ namespace DTail;
 use Aws\Common\Aws;
 use Aws\DynamoDb\DynamoDbClient;
 
-use Monolog\Logger;
-use Monolog\Handler\DynamoDbHandler;
-use Monolog\ErrorHandler;
-
 use DTail\Utils;
 
 
@@ -21,7 +17,7 @@ class DTail {
     private $secret;
     private $region;
 
-    public function __construct($dynamodb, $config) {
+    public function __construct($dynamodb) {
 
         $this->dynamodb = $dynamodb;
 

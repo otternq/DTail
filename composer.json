@@ -17,9 +17,13 @@
     "require": {
         "php": ">=5.3.3",
         "aws/aws-sdk-php": "2.4.*@dev",
-        "monolog/monolog": "1.7.*",
         "kevinlebrun/colors.php": "0.*"
     },
+
+    "require-dev": {
+        "monolog/monolog": "1.7.*"
+    },
+
     "config": {
         "vendor-dir": "vendor"
     },
