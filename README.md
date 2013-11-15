@@ -6,6 +6,8 @@ Watch and search Logs entries stored in a DynamoDB table
 Installing
 -------
 
+DTail is available on [Packagist](https://packagist.org/packages/otternq/dtail).
+
 To install with composer, add: `"otternq/dtail": "dev-master"` to _composer.json_ in the **require** section:
 
 ```json
