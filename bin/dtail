@@ -7,14 +7,29 @@ use Colors\Color;
 use DTail\DTail;
 use DTail\CLI;
 
+use Aws\Common\Aws;
+use Aws\DynamoDb\DynamoDbClient;
+
 $options = getopt("f:");
 
 $file = $options['f'];
 
 $config = include $file;
 
-$dtail = new DTail($config);
-$iterator = $dtail->get('PHPErrorReporter');
+$dynamodbClient = DynamoDbClient::factory(
+    array(
+        'key'    => $config['dyn-key'],
+        'secret' => $config['dyn-secret'],
+        'region' => $config['dyn-region'],
+    )
+);
+
+$dtail = new DTail($dynamodbClient, $config);
+
+$iterator = $dtail->get(
+    $config['dyn-table'], 
+    'PHPErrorReporter'
+);
 
 printf(
     CLI::formatString, 

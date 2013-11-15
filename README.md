@@ -31,6 +31,9 @@ include "vendor/autoload.php";
 
 use Colors\Color;
 
+use Aws\Common\Aws;
+use Aws\DynamoDb\DynamoDbClient;
+
 use DTail\DTail;
 
 $config = array(
@@ -40,12 +43,24 @@ $config = array(
     'dyn-region' => 'us-east-1'
 );
 
-$dtail = new DTail($config);
-$iterator = $dtail->get('PHPErrorReporter');
+$dynamodbClient = DynamoDbClient::factory(array(
+    'key'    => $config['dyn-key'],
+    'secret' => $config['dyn-secret'],
+    'region' => $config['dyn-region'],
+    )
+);
+
+$dtail = new DTail($dynamodbClient, $config);
+
+$iterator = $dtail->get(
+    $config['dyn-table'], 
+    'PHPErrorReporter'
+);
 
 foreach($iterator as $item) {
     var_dump($item);
 }
+
 ```
 
 ###Usage 2

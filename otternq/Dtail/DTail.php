@@ -21,30 +21,16 @@ class DTail {
     private $secret;
     private $region;
 
-    public function __construct($config) {
+    public function __construct($dynamodb, $config) {
 
-        $config = new Utils\Arr($config); //use my array wrapper
-        
-        $this->table = $config->get('dyn-table');
-        $this->key = $config->get('dyn-key', true);
-        $this->secret = $config->get('dyn-secret', true);
-        $this->region = $config->get('dyn-region', true);
-
-
-
-        $this->dynamodb = $client = DynamoDbClient::factory(array(
-            'key'    => $this->key,
-            'secret' => $this->secret,
-            'region' => $this->region,
-            )
-        );
+        $this->dynamodb = $dynamodb;
 
     }
 
-    public function get($channel) {
+    public function get($table, $channel) {
 
         $iterator = $this->dynamodb->getIterator('Query', array(
-            'TableName'     => $this->table,
+            'TableName'     => $table,
             'KeyConditions' => array(
                 'channel' => array(
                     'AttributeValueList' => array(
