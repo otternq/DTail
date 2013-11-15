@@ -3,7 +3,7 @@
     "type": "metapackage",
     "description": "Prints PHP Errors that have been logged to DynamoDB",
     "keywords": ["logs", "dynamodb"],
-    "homepage": "https://github.com/otternq/PHPErrorReporter",
+    "homepage": "https://github.com/otternq/DTail",
     "license": "MIT",
     "authors": [
         {
