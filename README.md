@@ -6,6 +6,8 @@ Watch and search Logs entries stored in a DynamoDB table
 Installing
 -------
 
+DTail is available on [Packagist](https://packagist.org/packages/otternq/dtail).
+
 To install with composer, add: `"otternq/dtail": "dev-master"` to _composer.json_ in the **require** section:
 
 ```json
@@ -29,6 +31,9 @@ include "vendor/autoload.php";
 
 use Colors\Color;
 
+use Aws\Common\Aws;
+use Aws\DynamoDb\DynamoDbClient;
+
 use DTail\DTail;
 
 $config = array(
@@ -38,12 +43,24 @@ $config = array(
     'dyn-region' => 'us-east-1'
 );
 
-$dtail = new DTail($config);
-$iterator = $dtail->get('PHPErrorReporter');
+$dynamodbClient = DynamoDbClient::factory(array(
+    'key'    => $config['dyn-key'],
+    'secret' => $config['dyn-secret'],
+    'region' => $config['dyn-region'],
+    )
+);
+
+$dtail = new DTail($dynamodbClient, $config);
+
+$iterator = $dtail->get(
+    $config['dyn-table'], 
+    'PHPErrorReporter'
+);
 
 foreach($iterator as $item) {
     var_dump($item);
 }
+
 ```
 
 ###Usage 2
