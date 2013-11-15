@@ -1,6 +1,6 @@
 {
     "name": "otternq/dtail",
-    "type": "metapackage",
+    "type": "library",
     "description": "Prints PHP Errors that have been logged to DynamoDB",
     "keywords": ["logs", "dynamodb"],
     "homepage": "https://github.com/otternq/DTail",
