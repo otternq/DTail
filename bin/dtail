@@ -24,7 +24,7 @@ $dynamodbClient = DynamoDbClient::factory(
     )
 );
 
-$dtail = new DTail($dynamodbClient, $config);
+$dtail = new DTail($dynamodbClient);
 
 $iterator = $dtail->get(
     $config['dyn-table'], 
