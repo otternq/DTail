@@ -2,6 +2,8 @@
 
 namespace DTail;
 
+use DTail\DTail;
+
 use Aws\Common\Aws;
 use Aws\DynamoDb\DynamoDbClient;
 
