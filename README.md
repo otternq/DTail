@@ -5,11 +5,13 @@ Watch and search Logs entries stored in a DynamoDB table
 
 [![Total Downloads](https://poser.pugx.org/otternq/DTail/downloads.png)](https://packagist.org/packages/otternq/DTail)
 [![Latest Stable Version](https://poser.pugx.org/otternq/DTail/v/stable.png)](https://packagist.org/packages/otternq/DTail)
+[![Dependency Status](https://www.versioneye.com/package/otternq--dtail/badge.png)](https://www.versioneye.com/package/otternq--dtail)
 
 
 | Master | Development |
 | ------ | ----------- |
 | [![Build Status](https://travis-ci.org/otternq/DTail.png?branch=master)](https://travis-ci.org/otternq/DTail) | [![Build Status](https://travis-ci.org/otternq/DTail.png?branch=development)](https://travis-ci.org/otternq/DTail) |
+| [![Coverage Status](https://coveralls.io/repos/otternq/DTail/badge.png?branch=master)](https://coveralls.io/r/otternq/DTail?branch=master) | [![Coverage Status](https://coveralls.io/repos/otternq/DTail/badge.png?branch=development)](https://coveralls.io/r/otternq/DTail?branch=development) |
 
 Installing
 -------

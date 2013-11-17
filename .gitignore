@@ -3,3 +3,5 @@ vendor/
 configs/
 bin/error.php
 build/
+
+.coveralls.yml
