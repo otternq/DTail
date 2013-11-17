@@ -14,6 +14,14 @@
 
     "bin": ["bin/dtail"],
 
+    "repositories": [
+        {
+            "type": "git",
+            "name": "monolog/monolog",
+            "url": "https://github.com/otternq/monolog"
+        }
+    ],
+
     "require": {
         "php": ">=5.3.3",
         "aws/aws-sdk-php": "2.4.*@dev",
@@ -21,7 +29,8 @@
     },
 
     "require-dev": {
-        "monolog/monolog": "1.7.*"
+        "phpunit/phpunit": "~3.7.0",
+        "monolog/monolog": "dev-dev-processor-git"
     },
 
     "config": {

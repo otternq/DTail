@@ -12,11 +12,6 @@ class DTail {
 
     private $dynamodb;
 
-    private $table;
-    private $key;
-    private $secret;
-    private $region;
-
     public function __construct($dynamodb) {
 
         $this->dynamodb = $dynamodb;
