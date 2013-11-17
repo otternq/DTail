@@ -47,9 +47,6 @@ class DTailTest extends \PHPUnit_Framework_TestCase {
         $dtail = new DTail($this->mockDynamoDBClient);
         $data = $dtail->get('PHPErrors', 'PHPErrorReporter');
 
-
-        print_r($data);
-
         $this->assertTrue(is_array($data));
 
     }

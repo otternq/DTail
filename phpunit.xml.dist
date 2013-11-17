@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<phpunit bootstrap="tests/bootstrap.php" colors="true">
+<phpunit bootstrap="./vendor/autoload.php" colors="true">
     <testsuites>
         <testsuite name="DTail Test Suite">
-            <directory>tests/DTail/</directory>
+            <directory>./tests/</directory>
         </testsuite>
     </testsuites>
 
     <filter>
         <whitelist>
-            <directory suffix=".php">otternq/DTail/</directory>
+            <directory suffix=".php">otternq</directory>
         </whitelist>
     </filter>
 </phpunit>
