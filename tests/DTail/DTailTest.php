@@ -2,6 +2,8 @@
 
 namespace DTail;
 
+include __DIR__ . '/../../vendor/autoload.php';
+
 use DTail\DTail;
 
 use Aws\Common\Aws;
