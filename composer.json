@@ -41,7 +41,7 @@
         "psr-0": {"DTail": "src/"}
     },
 
-    "target-dir": "src/"
+    "target-dir": "src/",
 
     "minimum-stability": "dev"
 }
