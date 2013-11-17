@@ -3,6 +3,9 @@ DTail
 
 Watch and search Logs entries stored in a DynamoDB table
 
+[![Total Downloads](https://poser.pugx.org/otternq/DTail/downloads.png)](https://packagist.org/packages/otternq/DTail)
+[![Latest Stable Version](https://poser.pugx.org/otternq/DTail/v/stable.png)](https://packagist.org/packages/otternq/DTail)
+
 Installing
 -------
 
