@@ -10,9 +10,10 @@ use DTail\CLI;
 use Aws\Common\Aws;
 use Aws\DynamoDb\DynamoDbClient;
 
-$options = getopt("f:");
+$options = getopt("f:c:");
 
 $file = $options['f'];
+$channel = $options['c'];
 
 $config = include $file;
 
@@ -28,7 +29,8 @@ $dtail = new DTail($dynamodbClient);
 
 $iterator = $dtail->get(
     $config['dyn-table'], 
-    'PHPErrorReporter'
+    //'PHPErrorReporter'
+    $channel
 );
 
 printf(

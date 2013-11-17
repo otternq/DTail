@@ -8,6 +8,17 @@ use Colors\Color;
 
 class CLI {
 
+    protected static $levels = array(
+        100 => 'DEBUG',
+        200 => 'INFO',
+        250 => 'NOTICE',
+        300 => 'WARNING',
+        400 => 'ERROR',
+        500 => 'CRITICAL',
+        550 => 'ALERT',
+        600 => 'EMERGENCY',
+    );
+
     const formatString = "%-17s %-11.10s %-10s %-60s %s\n";
 
     static function run($iterator) {
@@ -45,7 +56,10 @@ class CLI {
         switch ($level) {
             //250 is notice
             case 300: //warning
-            $out = $out->yellow;
+                $out = $out->yellow;
+            break;
+            case 400:
+                $out = $out->red;
             break;
         }
 
