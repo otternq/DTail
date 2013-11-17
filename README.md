@@ -10,6 +10,7 @@ Watch and search Logs entries stored in a DynamoDB table
 | Master | Development |
 | ------ | ----------- |
 | [![Build Status](https://travis-ci.org/otternq/DTail.png?branch=master)](https://travis-ci.org/otternq/DTail) | [![Build Status](https://travis-ci.org/otternq/DTail.png?branch=development)](https://travis-ci.org/otternq/DTail) |
+| [![Coverage Status](https://coveralls.io/repos/otternq/DTail/badge.png)](https://coveralls.io/r/otternq/DTail) | |
 
 Installing
 -------
