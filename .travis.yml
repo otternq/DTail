@@ -3,4 +3,9 @@ php:
     - 5.4
 before_script:
     - composer install --dev
-script: "php vendor/bin/phpunit"
+script: 
+    - mkdir -p build/logs
+    - php vendor/bin/phpunit
+after_script:
+    # or enable logging
+    - php vendor/bin/coveralls -v

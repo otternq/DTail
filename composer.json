@@ -30,7 +30,8 @@
 
     "require-dev": {
         "phpunit/phpunit": "~3.7.0",
-        "monolog/monolog": "dev-dev-processor-git"
+        "monolog/monolog": "dev-dev-processor-git",
+        "satooshi/php-coveralls": "dev-master"
     },
 
     "config": {
