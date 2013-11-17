@@ -38,7 +38,7 @@
     },
 
     "autoload": {
-        "psr-0": {"DTail": "otternq/"}
+        "psr-0": {"DTail": "src/"}
     },
 
     "minimum-stability": "dev"

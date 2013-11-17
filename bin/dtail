@@ -33,10 +33,6 @@ $iterator = $dtail->get(
     $channel
 );
 
-foreach($iterator as $item) {
-    print_r($item);
-}
-
 printf(
     CLI::formatString, 
     "Channel",
